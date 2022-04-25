@@ -1,0 +1,17 @@
+.header{
+    /* border: 1px solid red; */
+    display: flex;
+}
+.header__left{
+    display: flex;
+
+}
+.header__left > img{
+    object-fit: contain;
+    height: 40px;
+}
+
+.header__search{
+    padding: 10px;
+    display: flex;
+}
