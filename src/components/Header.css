@@ -1,6 +1,14 @@
 .header{
     /* border: 1px solid red; */
     display: flex;
+    justify-content: space-evenly;
+    border-bottom:  0.1px solid lightgray;
+    padding-top:10px;
+    padding-bottom:10px;
+    width: 100%;
+    position:sticky;
+    top:0;
+    z-index: 999;
 }
 .header__left{
     display: flex;
@@ -8,10 +16,27 @@
 }
 .header__left > img{
     object-fit: contain;
-    height: 40px;
+    height: 50px;
+    /* border: 1px solid red; */
+    margin-top: -4px;
+    margin-right: 4px;
 }
 
 .header__search{
     padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 22px;
+    color: gray;
+    background-color: #eef3f8;
+}
+.header__search> input{
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.header__right{
     display: flex;
 }
