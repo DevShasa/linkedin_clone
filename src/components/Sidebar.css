@@ -63,7 +63,7 @@
     font-weight: 600;
     white-space: nowrap;
 }
-p.sidebar__statnumber{
+.sidebar__stat> p.sidebar__statnumber{
     margin-left: 20px;
     color:#0a66c2;
     font-weight:bold;
@@ -90,6 +90,7 @@ p.sidebar__statnumber{
 }
 .sidebar__recentItem:hover{
     background-color:whitesmoke;
+    border-radius: 6px;
 }
 .sidebar__recentItem >p{
     margin-left:9px;
