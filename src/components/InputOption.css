@@ -1,0 +1,12 @@
+.inputOption{
+    display: flex;
+    padding: 5px;
+    border-radius: 4px;
+    align-items: center;
+}
+.inputOption:hover{
+    background-color: whitesmoke;
+}
+.inputOption > span{
+    margin-left: 6px;
+}
