@@ -6,12 +6,13 @@ import PhotoIcon from '@mui/icons-material/Photo';
 import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
 import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
+import Post from "./Post";
 
 function Feed() {
     return (
         <div className="feed">
-            <div className="feed__inputContainer">
 
+            <div className="feed__inputContainer">
                 <div className="feed__input">
                     <CreateIcon />
                     <form>
@@ -30,7 +31,12 @@ function Feed() {
                 </div>
             </div>
 
-            
+            <Post 
+                name="Shasa Thuo"
+                description = "This is the description "
+                message="wOLAN SHATade love an peace to all"
+            />
+
         </div>
     )
 }
