@@ -16,7 +16,7 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(()=>{
-        // create a real time listener to firebase
+        // create a real time listener to firebase, snapshot 
         // Anytime the database changes it will update here too
         db.collection("posts")
             .orderBy('timestamp', 'desc')
@@ -27,9 +27,9 @@ function Feed() {
     }, [])
 
     const sendPost = (e) =>{
-        // when user presses enter push data to the database
         e.preventDefault();
-
+        
+        // Push item to firestore database, wll be added as a new document
         db.collection("posts").add({
             name: "Shasa Thuo",
             description: "this is a test",
@@ -92,7 +92,7 @@ function Feed() {
 
 
         </div>
-    )
+    ) 
 }
 
 export default Feed
