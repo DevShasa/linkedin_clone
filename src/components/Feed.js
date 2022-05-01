@@ -10,8 +10,11 @@ import Post from "./Post";
 import { db }  from "../firebase/firebase";
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
+import { useSelector } from 'react-redux';
 
 function Feed() {
+
+    const { user } = useSelector(state=>state.userState)
 
     const [input, setInput] = useState('');
     const [posts, setPosts] = useState([]);
@@ -32,10 +35,10 @@ function Feed() {
         
         // Push item to firestore database, wll be added as a new document
         db.collection("posts").add({
-            name: "Shasa Thuo",
-            description: "this is a test",
+            name: user.displayName,
+            description: user.email,
             message: input,
-            photoUrl: '',
+            photoUrl: user.photoUrl,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
         setInput("")
