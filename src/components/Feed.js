@@ -9,6 +9,7 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 import Post from "./Post";
 import { db }  from "../firebase/firebase";
 import firebase from 'firebase';
+import FlipMove from 'react-flip-move';
 
 function Feed() {
 
@@ -73,7 +74,7 @@ function Feed() {
                         <div>There are no posts at the moment</div>
                     )
                     : (
-                        <div>
+                        <FlipMove>
                             {posts.map(({id, data:{name, description, message, photoUrl}})=>{
                                 return(
                                     <Post 
@@ -85,7 +86,7 @@ function Feed() {
                                     />
                                 )
                             })}
-                        </div>
+                        </FlipMove>
                     )
                 }
             </div>
