@@ -21,12 +21,14 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar__top">
-                <img src={imagetop}  alt="" />
+                <img src={imagetop}  alt="sky" />
                 <Avatar 
                     className="sidebar__avatar" 
-                    src={user.photoUrl}
+                    src={user ? user.photoUrl : ""}
                     >
-                        {user.displayName[0].toUpperCase}
+                        {/* {user ? user.email[0].toUpperCase() : undefined} */}
+                        {user.email[0]?.toUpperCase()}
+
                     </Avatar>
                 <h2>{user.displayName}</h2>
                 <h4>{user.email}</h4>

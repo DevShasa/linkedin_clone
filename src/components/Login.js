@@ -26,7 +26,7 @@ function Login() {
                 })
             )
         }catch(error){
-            alert(error);
+            alert(`If creating a new account click Register Now, below the sign in button, \nelse ${error}`);
         }
 
     }
@@ -59,7 +59,6 @@ function Login() {
             }));
 
         }catch(error){
-            console.log("ERROR>>", error)
             alert("ERROR>>", error)
         }
     };
@@ -108,7 +107,9 @@ function Login() {
                     Register Now
                 </span>  
             </p>
-
+            <p>
+                Only email and password if you have an account
+            </p>
         </div>
     )
 }
